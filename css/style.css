@@ -1,0 +1,540 @@
+/* ==========================================
+   SAGOMU - Design System & Estilos Globales
+   ========================================== */
+
+/* --- Variables CSS (Design System) --- */
+:root {
+    /* Paleta de Colores */
+    --color-primario: #0A2540;      /* Azul marino corporativo */
+    --color-secundario: #1E88E5;    /* Azul brillante */
+    --color-acento: #FF6F00;         /* Naranja/Ámbar - CTA */
+    --color-fondo: #F8F9FA;          /* Gris muy claro */
+    --color-blanco: #FFFFFF;         /* Blanco */
+    --color-texto: #333333;          /* Gris oscuro */
+    --color-texto-claro: #666666;   /* Gris medio */
+
+    /* Sombras */
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --sombra-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    /* Bordes */
+    --borde-radio: 12px;
+
+    /* Espaciado */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    /* Transiciones */
+    --transicion: all 0.3s ease;
+}
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-primario);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--color-texto-claro);
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    transition: var(--transicion);
+}
+
+a:hover {
+    color: var(--color-acento);
+}
+
+/* --- Componentes UI --- */
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--borde-radio);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    border: 2px solid transparent;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+    background-color: #e65a00;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+.btn-secondary {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.btn-secondary:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-blanco);
+    color: var(--color-blanco);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* --- HEADER (Sticky) --- */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-suave);
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--color-secundario);
+}
+
+/* Menú móvil (hamburger) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primario);
+    border-radius: 2px;
+    transition: var(--transicion);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(135deg, var(--color-primario) 0%, #0d3a5c 100%);
+    color: var(--color-blanco);
+    padding: var(--spacing-xl) var(--spacing-sm);
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--color-blanco);
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-sm);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-column h3 {
+    color: var(--color-blanco);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.footer-column p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links a:hover {
+    color: var(--color-blanco);
+}
+
+.footer-logos {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.footer-logos img {
+    height: 40px;
+    opacity: 0.8;
+    transition: var(--transicion);
+}
+
+.footer-logos img:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* --- PÁGINA CERTIFICACIONES --- */
+
+/* Header de página */
+.page-header {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-sm);
+    background-color: var(--color-blanco);
+}
+
+.page-header h1 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Filtros */
+.filters {
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #e0e0e0;
+    background-color: var(--color-blanco);
+    color: var(--color-texto-claro);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.filter-btn.active {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Contenedor del catálogo */
+.catalogo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm) var(--spacing-xl);
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-md);
+    align-items: stretch;
+}
+
+/* Tarjeta de certificación */
+.cert-card {
+    background-color: var(--color-blanco);
+    border: 1px solid #e0e0e0;
+    border-radius: var(--borde-radio);
+    padding: var(--spacing-md);
+    transition: var(--transicion);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cert-card:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-5px);
+}
+
+.cert-image {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-image img {
+    max-height: 80px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.cert-category {
+    display: inline-block;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.cert-title {
+    color: var(--color-primario);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.2rem;
+    min-height: 2.8rem;
+    line-height: 1.4;
+}
+
+.cert-description {
+    color: var(--color-texto-claro);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.cert-brand {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--color-texto-claro);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.cert-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+}
+
+.cert-buttons .btn {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+}
+
+/* Mensaje de error */
+.error-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--color-texto-claro);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1280px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: stretch;
+    }
+}
+
+/* Móvil */
+@media (max-width: 1023px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-blanco);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--sombra-suave);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .header-nav {
+        position: relative;
+    }
+}
+
+/* Utilidades */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

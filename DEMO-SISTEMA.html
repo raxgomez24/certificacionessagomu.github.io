@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Sistema Sagomu - Vista Rápida</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; }
+        .demo-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .section h2 { color: #667eea; margin-bottom: 15px; font-size: 1.8rem; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #667eea; }
+        .stat-card h3 { font-size: 2rem; color: #667eea; margin-bottom: 5px; }
+        .stat-card p { color: #666; font-size: 0.9rem; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .link-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.3s; }
+        .link-card:hover { transform: translateY(-5px); }
+        .link-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+        .link-card p { opacity: 0.9; font-size: 0.9rem; }
+        .link-card .url { font-family: monospace; font-size: 0.85rem; opacity: 0.8; margin-top: 10px; }
+        .features-list { list-style: none; }
+        .features-list li { padding: 10px 15px; margin-bottom: 8px; background: #f8f9fa; border-left: 4px solid #764ba2; border-radius: 4px; }
+        .features-list li:before { content: "✅ "; margin-right: 10px; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tech-item { background: #e9ecef; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; }
+        .cert-list { max-height: 300px; overflow-y: auto; }
+        .cert-item { padding: 10px; margin-bottom: 5px; background: #f8f9fa; border-radius: 4px; }
+        .cert-item:hover { background: #e9ecef; }
+        .cert-complete { border-left: 4px solid #28a745; }
+        .cert-base { border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="header">
+            <h1>🚀 Sistema Sagomu - Demo Interactiva</h1>
+            <p>Tu sistema de certificaciones completo y funcional. Explora todas las características.</p>
+        </div>
+
+        <div class="section">
+            <h2>📊 Estadísticas del Sistema</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>75</h3>
+                    <p>Certificaciones Totales</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4</h3>
+                    <p>Temarios Completos</p>
+                </div>
+                <div class="stat-card">
+                    <h3>14</h3>
+                    <p>Categorías</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Responsive</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Enlaces Directos a Páginas</h2>
+            <div class="links-grid">
+                <a href="http://localhost:8000/certificaciones.html" class="link-card">
+                    <h3>📋 Catálogo Principal</h3>
+                    <p>Ver todas las 75 certificaciones organizadas por categorías</p>
+                    <div class="url">certificaciones.html</div>
+                </a>
+                <a href="http://localhost:8000/temario.html?cert=adobe-photoshop-professional" class="link-card">
+                    <h3>📚 Temario Completo</h3>
+                    <p>Ver ejemplo completo con Adobe Photoshop</p>
+                    <div class="url">temario.html?cert=adobe-photoshop-professional</div>
+                </a>
+                <a href="http://localhost:8000/agendar.html?cert=adobe-photoshop-professional" class="link-card">
+                    <h3>📝 Formulario Agendar</h3>
+                    <p>Sistema de agendamiento con preselección</p>
+                    <div class="url">agendar.html?cert=adobe-photoshop-professional</div>
+                </a>
+                <a href="http://localhost:8000/temario.html?cert=adobe-illustrator-professional" class="link-card">
+                    <h3>🎨 Adobe Illustrator</h3>
+                    <p>Otro temario completo de ejemplo</p>
+                    <div class="url">temario.html?cert=adobe-illustrator-professional</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Características Implementadas</h2>
+            <ul class="features-list">
+                <li>Catálogo dinámico con 75 certificaciones</li>
+                <li>Filtros por categorías funcionales</li>
+                <li>Páginas individuales de temario con información detallada</li>
+                <li>4 temarios completos con objetivos, módulos y porcentajes</li>
+                <li>Formulario de agendamiento con validación</li>
+                <li>Diseño responsive para móviles, tablets y desktop</li>
+                <li>Navegación fluida con breadcrumbs</li>
+                <li>URLs dinámicas y amigables</li>
+                <li>Carga asíncrona de contenido JSON</li>
+                <li>Confirmación visual de solicitudes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Stack Tecnológico</h2>
+            <div class="tech-stack">
+                <div class="tech-item">HTML5</div>
+                <div class="tech-item">CSS3</div>
+                <div class="tech-item">JavaScript ES6+</div>
+                <div class="tech-item">JSON</div>
+                <div class="tech-item">Fetch API</div>
+                <div class="tech-item">Responsive Design</div>
+                <div class="tech-item">Vanilla JS</div>
+                <div class="tech-item">Grid CSS</div>
+                <div class="tech-item">Flexbox</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Certificaciones Disponibles</h2>
+            <div class="cert-list">
+                <div class="cert-item cert-complete">✅ Adobe Photoshop Professional - TEMARIO COMPLETO</div>
+                <div class="cert-item cert-complete">✅ Adobe Illustrator Professional - TEMARIO COMPLETO</div>
+                <div class="cert-item cert-complete">✅ Adobe InDesign Professional - TEMARIO COMPLETO</div>
+                <div class="cert-item cert-complete">✅ ITS Python - TEMARIO COMPLETO</div>
+                <div class="cert-item cert-base">📋 Adobe Photoshop (base)</div>
+                <div class="cert-item cert-base">📋 Adobe Illustrator (base)</div>
+                <div class="cert-item cert-base">📋 Adobe InDesign (base)</div>
+                <div class="cert-item cert-base">📋 Autodesk AutoCAD</div>
+                <div class="cert-item cert-base">📋 Autodesk Revit</div>
+                <div class="cert-item cert-base">📋 Autodesk 3ds Max</div>
+                <div class="cert-item cert-base">📋 Cisco CCST Networking</div>
+                <div class="cert-item cert-base">📋 Cisco CCST Cybersecurity</div>
+                <div class="cert-item cert-base">📋 Microsoft Office Specialist - Word</div>
+                <div class="cert-item cert-base">📋 Microsoft Office Specialist - Excel</div>
+                <div class="cert-item cert-base">📋 Unity Certified User - Programmer</div>
+                <div class="cert-item cert-base">📋 App Development Swift Associate</div>
+                <div class="cert-item cert-base">📋 PMI Project Management Ready</div>
+            </div>
+            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                💡 71 certificaciones más con estructura base lista para completar
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Flujo de Usuario Actual</h2>
+            <ol style="line-height: 2; padding-left: 20px;">
+                <li>Usuario entra al <strong>catálogo</strong> y ve 75 certificaciones</li>
+                <li>Explora por <strong>categorías</strong> (Habilidades Digitales, Ofimática, Diseño, etc.)</li>
+                <li>Hace clic en <strong>"Ver Temario"</strong> de la certificación elegida</li>
+                <li>Ve página individual con <strong>objetivos específicos</strong>, <strong>módulos detallados</strong>, <strong>información del examen</strong></li>
+                <li>Hace clic en <strong>"Agendar Examen"</strong> desde el temario</li>
+                <li>Llega al <strong>formulario</strong> con la certificación preseleccionada</li>
+                <li>Completa sus datos y recibe <strong>confirmación</strong> inmediata</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

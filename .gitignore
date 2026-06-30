@@ -1,0 +1,13 @@
+# Archivos temporales
+.DS_Store
+Thumbs.db
+*.log
+*.backup
+
+# Archivos de desarrollo
+.vscode/
+.idea/
+*.template.html
+
+# Opcional: omitir archivos de demo si prefieres
+# DEMO-SISTEMA.html

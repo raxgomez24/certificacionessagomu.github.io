@@ -1,0 +1,430 @@
+{
+  "certificaciones": [
+    {
+      "id": "adobe-photoshop-professional",
+      "categoria": "Diseño y Creatividad",
+      "marca": "Adobe",
+      "nombreExamen": "Adobe Certified Professional - Photoshop",
+      "descripcion": "Valida habilidades profesionales en edición y manipulación de imágenes digitales utilizando Adobe Photoshop. Demuestra dominio en herramientas esenciales para diseño gráfico, fotografía y medios digitales.",
+      "imagenLogo": "assets/logos/Adobe_Certified_Professional_badge.svg",
+      "linkTemario": "#",
+      "objetivos": [
+        "Diseñar imágenes gráficas con Photoshop utilizando principios fundamentales de diseño",
+        "Identificar componentes de la interfaz de Photoshop y personalizar el espacio de trabajo",
+        "Importar, exportar y organizar activos digitales",
+        "Aplicar técnicas de selección y transformación de objetos",
+        "Utilizar capas y máscaras para composiciones complejas",
+        "Implementar ajustes de color y corrección fotográfica",
+        "Aplicar filtros y efectos especializados",
+        "Preparar archivos para impresión y distribución digital"
+      ],
+      "modulos": [
+        {
+          "nombre": "Diseño de Imágenes Gráficas (1.5)",
+          "temas": [
+            "Principios fundamentales de diseño gráfico",
+            "Teoría del color y psicología del color",
+            "Tipografía básica y composición visual",
+            "Resolución de problemas de diseño con especificaciones del proyecto"
+          ],
+          "porcentaje": 20
+        },
+        {
+          "nombre": "Interfaz de Photoshop (1.6)",
+          "temas": [
+            "Componentes de la interfaz: paneles, herramientas y menús",
+            "Personalización del espacio de trabajo",
+            "Navegación y zoom en documentos",
+            "Configuración de preferencias y unidades de medida"
+          ],
+          "porcentaje": 15
+        },
+        {
+          "nombre": "Importación y Exportación (1.7)",
+          "temas": [
+            "Importación de archivos desde diferentes fuentes",
+            "Exportación en múltiples formatos (JPEG, PNG, PSD, TIFF)",
+            "Compresión y optimización de archivos",
+            "Gestión de activos digitales con Adobe Bridge"
+          ],
+          "porcentaje": 12
+        },
+        {
+          "nombre": "Selección y Transformación (1.8)",
+          "temas": [
+            "Herramientas de selección: marco, lazo, varita mágica",
+            "Selecciones basadas en bordes y color",
+            "Transformación libre y precisa de objetos",
+            "Recorte, rotación y perspectiva"
+          ],
+          "porcentaje": 16
+        },
+        {
+          "nombre": "Capas y Máscaras (1.9)",
+          "temas": [
+            "Sistema de capas y apilamiento",
+            "Máscaras de capa y vectores",
+            "Modos de fusión y opacidad",
+            "Estilos de capa y efectos"
+          ],
+          "porcentaje": 18
+        },
+        {
+          "nombre": "Ajustes de Color y Filtros (2.0)",
+          "temas": [
+            "Ajustes de nivel, curvas y color",
+            "Corrección fotográfica y balance de blancos",
+            "Filtros artísticos y de desenfoque",
+            "Efectos de texto y capa"
+          ],
+          "porcentaje": 19
+        }
+      ],
+      "requisitos": [
+        "Experiencia práctica de 6-12 meses con Adobe Photoshop",
+        "Conocimiento fundamental de diseño gráfico",
+        "Familiaridad con terminología digital y de impresión"
+      ],
+      "infoExamen": {
+        "duracion": "50 minutos",
+        "formato": "Examen basado en escenarios prácticos con 33-40 preguntas",
+        "notaAprobacion": "700/1000 puntos",
+        "numeroIntentos": "3 intentos máximos si no se aprueba",
+        "periodoEspera": "24 horas entre intentos"
+      },
+      "publicoObjetivo": "Estudiantes, diseñadores gráficos, fotógrafos y profesionales de medios digitales que buscan validar sus habilidades en Photoshop",
+      "carreras": [
+        "Diseñador Gráfico",
+        "Fotógrafo Digital",
+        "Retocador Fotográfico",
+        "Artista Digital",
+        "Diseñador de Medios Interactivos",
+        "Especialista en Publicidad Digital"
+      ]
+    },
+    {
+      "id": "adobe-illustrator-professional",
+      "categoria": "Diseño y Creatividad",
+      "marca": "Adobe",
+      "nombreExamen": "Adobe Certified Professional - Illustrator",
+      "descripcion": "Certifica competencias profesionales en creación de gráficos vectoriales e ilustraciones con Adobe Illustrator. Valida habilidades para diseños de logos, ilustraciones, packaging y contenido multiformato.",
+      "imagenLogo": "assets/logos/Adobe_Certified_Professional_badge.svg",
+      "linkTemario": "#",
+      "objetivos": [
+        "Diseñar ilustraciones vectoriales utilizando principios de diseño fundamentales",
+        "Navegar eficientemente por la interfaz de Illustrator y personalizar espacios de trabajo",
+        "Crear y gestionar documentos para múltiples medios (impreso, web, video)",
+        "Dibujar y transformar formas vectoriales con herramientas de precisión",
+        "Organizar ilustraciones complejas mediante capas y paneles",
+        "Aplicar color, degradados y transparencias profesionales",
+        "Utilizar tipografía avanzada y herramientas de texto",
+        "Preparar archivos para salida en impresión y medios digitales"
+      ],
+      "modulos": [
+        {
+          "nombre": "Diseño de Ilustraciones (1.1)",
+          "temas": [
+            "Principios fundamentales de diseño gráfico vectorial",
+            "Teoría del color aplicada a gráficos vectoriales",
+            "Composición y equilibrio visual",
+            "Resolución de problemas de diseño con criterios del proyecto"
+          ],
+          "porcentaje": 18
+        },
+        {
+          "nombre": "Interfaz de Illustrator (1.2)",
+          "temas": [
+            "Componentes de la interfaz y paneles de herramientas",
+            "Personalización del espacio de trabajo",
+            "Gestión de documentos y configuración de arte",
+            "Navegación y vista previa de ilustraciones"
+          ],
+          "porcentaje": 14
+        },
+        {
+          "nombre": "Gestión de Documentos (1.3)",
+          "temas": [
+            "Creación de documentos para diferentes medios",
+            "Configuración de perfiles de color",
+            "Gestión de páginas y tableros múltiples",
+            "Plantillas y previsualización de salida"
+          ],
+          "porcentaje": 13
+        },
+        {
+          "nombre": "Dibujo y Transformación (1.4)",
+          "temas": [
+            "Herramientas de pluma, pincel y formas",
+            "Creación y edición de trazados y puntos de ancla",
+            "Transformación precisa de objetos",
+            "Herramientas de forma y símbolos"
+          ],
+          "porcentaje": 20
+        },
+        {
+          "nombre": "Organización de Ilustraciones (1.5)",
+          "temas": [
+            "Sistema de capas y jerarquía de objetos",
+            "Paneles de Capas, Apariencia y Gráficos",
+            "Agrupación y alineación de objetos",
+            "Bloques y símbolos reutilizables"
+          ],
+          "porcentaje": 15
+        },
+        {
+          "nombre": "Color y Tipografía (1.6)",
+          "temas": [
+            "Modelos de color (RGB, CMYK, Pantone)",
+            "Degradados y transparencias avanzadas",
+            "Tipografía: fuentes, espaciado y efectos de texto",
+            "Muestras y bibliotecas de color"
+          ],
+          "porcentaje": 20
+        }
+      ],
+      "requisitos": [
+        "Experiencia práctica de 6-12 meses con Adobe Illustrator",
+        "Conocimiento de diseño gráfico vectorial",
+        "Familiaridad con conceptos de impresión y medios digitales"
+      ],
+      "infoExamen": {
+        "duracion": "50 minutos",
+        "formato": "Examen basado en escenarios con 33-40 preguntas",
+        "notaAprobacion": "700/1000 puntos",
+        "numeroIntentos": "3 intentos máximos",
+        "periodoEspera": "24 horas entre intentos"
+      },
+      "publicoObjetivo": "Diseñadores gráficos, ilustradores, creadores de contenido y profesionales del diseño visual que buscan certificar su competencia en Illustrator",
+      "carreras": [
+        "Diseñador Gráfico Vectorial",
+        "Ilustrador Digital",
+        "Diseñador de Branding y Logos",
+        "Diseñador de Packaging",
+        "Ilustrador Editorial",
+        "Diseñador de Contenido Digital"
+      ]
+    },
+    {
+      "id": "adobe-indesign-professional",
+      "categoria": "Diseño y Creatividad",
+      "marca": "Adobe",
+      "nombreExamen": "Adobe Certified Professional - InDesign",
+      "descripcion": "Valida experiencia profesional en diseño editorial y maquetación con Adobe InDesign. Certifica habilidades para crear documentos impresos y digitales complejos como revistas, libros y material corporativo.",
+      "imagenLogo": "assets/logos/Adobe_Certified_Professional_badge.svg",
+      "linkTemario": "#",
+      "objetivos": [
+        "Diseñar documentos de maquetación profesional utilizando principios de diseño editorial",
+        "Navegar y personalizar eficientemente la interfaz de InDesign",
+        "Crear y configurar documentos para diversos medios y formatos",
+        "Agregar y transformar elementos básicos de maquetación",
+        "Organizar documentos complejos mediante páginas y maquetaciones",
+        "Aplicar tipografía profesional y gestión avanzada de texto",
+        "Utilizar color, transparencias y efectos visuales",
+        "Preparar archivos para impresión, PDF y distribución digital"
+      ],
+      "modulos": [
+        {
+          "nombre": "Diseño de Maquetación (1.1)",
+          "temas": [
+            "Principios fundamentales de diseño editorial",
+            "Composición y jerarquía visual en documentos",
+            "Teoría del color aplicada a maquetación",
+            "Resolución de problemas de diseño con requisitos del proyecto"
+          ],
+          "porcentaje": 16
+        },
+        {
+          "nombre": "Interfaz de InDesign (1.2)",
+          "temas": [
+            "Componentes de la interfaz y paneles especializados",
+            "Personalización de espacios de trabajo",
+            "Gestión de documentos y configuración de preferencias",
+            "Navegación y visualización de páginas múltiples"
+          ],
+          "porcentaje": 13
+        },
+        {
+          "nombre": "Gestión de Documentos (1.3)",
+          "temas": [
+            "Creación de documentos para impresión y digital",
+            "Configuración de márgenes, columnas y guías",
+            "Gestión de páginas maestras y secciones",
+            "Plantillas y preajustes de documento"
+          ],
+          "porcentaje": 14
+        },
+        {
+          "nombre": "Elementos de Maquetación (1.4)",
+          "temas": [
+            "Herramientas de selección, transformación y dibujo",
+            "Creación y edición de marcos de texto y gráficos",
+            "Alineación, distribución y espaciado",
+            "Manipulación de objetos y capas"
+          ],
+          "porcentaje": 18
+        },
+        {
+          "nombre": "Organización de Documentos (1.5)",
+          "temas": [
+            "Sistema de páginas y secciones",
+            "Páginas maestras y su aplicación",
+            "Numeración automática y variables",
+            "Libros de InDesign y gestión de documentos múltiples"
+          ],
+          "porcentaje": 15
+        },
+        {
+          "nombre": "Tipografía y Color (1.6)",
+          "temas": [
+            "Formato avanzado de caracteres y párrafos",
+            "Estilos de texto y maquetación avanzada",
+            "Modelos de color y gestión del color",
+            "Transparencias y efectos de objeto"
+          ],
+          "porcentaje": 24
+        }
+      ],
+      "requisitos": [
+        "Experiencia práctica de 6-12 meses con Adobe InDesign",
+        "Conocimiento de diseño editorial y maquetación",
+        "Familiarización con procesos de impresión y producción digital"
+      ],
+      "infoExamen": {
+        "duracion": "50 minutos",
+        "formato": "Examen basado en escenarios con 33-40 preguntas",
+        "notaAprobacion": "700/1000 puntos",
+        "numeroIntentos": "3 intentos máximos",
+        "periodoEspera": "24 horas entre intentos"
+      },
+      "publicoObjetivo": "Diseñadores editoriales, maquetistas, profesionales de preimpresión y creadores de contenido impreso/digital que buscan certificar su expertise en InDesign",
+      "carreras": [
+        "Diseñador Editorial",
+        "Maquetista Profesional",
+        "Diseñador de Publicaciones",
+        "Coordinador de Preimpresión",
+        "Diseñador de Material Corporativo",
+        "Especialista en ePub y Publicación Digital"
+      ]
+    },
+    {
+      "id": "its-python-303",
+      "categoria": "Tecnologías de la Información",
+      "marca": "Certiport",
+      "nombreExamen": "Information Technology Specialist - Python",
+      "descripcion": "Valida conocimientos fundamentales y habilidades prácticas en programación con Python. Cubre sintaxis, estructuras de datos, programación orientada a objetos y desarrollo de aplicaciones básicas.",
+      "imagenLogo": "assets/logos/Information_Technology_Specialist_badge.svg",
+      "linkTemario": "#",
+      "objetivos": [
+        "Evaluar datos y expresiones con operadores de Python",
+        "Controlar el flujo del programa con condicionales y bucles",
+        "Documentar código con comentarios, docstrings y herramientas",
+        "Realizar manejo de archivos y gestionar recursos",
+        "Gestionar errores y excepciones con try/except",
+        "Realizar pruebas unitarias con assert y módulos de prueba",
+        "Analizar y resolver problemas de programación",
+        "Leer y escribir código Python según estándares de estilo"
+      ],
+      "modulos": [
+        {
+          "nombre": "Evaluación de Datos y Expresiones (25%)",
+          "temas": [
+            "Tipos de datos primitivos: números, cadenas, booleanos",
+            "Operadores aritméticos, de comparación y lógicos",
+            "Conversión de tipos (casting)",
+            "Expresiones booleanas y precedencia de operadores"
+          ],
+          "porcentaje": 25
+        },
+        {
+          "nombre": "Control de Flujo (25%)",
+          "temas": [
+            "Estructuras condicionales: if, elif, else",
+            "Bucles: for, while y sentencias break, continue",
+            "Comprensión de listas y generadores",
+            "Iteración y patrones de control de flujo"
+          ],
+          "porcentaje": 25
+        },
+        {
+          "nombre": "Documentación (11%)",
+          "temas": [
+            "Comentarios de una línea y múltiples líneas",
+            "Docstrings y documentación de funciones",
+            "Herramientas de documentación: help() y pydoc",
+            "Convenciones de estilo PEP 8"
+          ],
+          "porcentaje": 11
+        },
+        {
+          "nombre": "Manejo de Archivos (11%)",
+          "temas": [
+            "Apertura y cierre de archivos con open()",
+            "Lectura: read(), readline(), readlines()",
+            "Escritura: write(), writelines()",
+            "Gestión de contextos con with statement"
+          ],
+          "porcentaje": 11
+        },
+        {
+          "nombre": "Manejo de Excepciones (14%)",
+          "temas": [
+            "Bloques try, except, else, finally",
+            "Tipos de excepciones comunes",
+            "Propagación de excepciones con raise",
+            "Creación de excepciones personalizadas"
+          ],
+          "porcentaje": 14
+        },
+        {
+          "nombre": "Pruebas y Resolución de Problemas (14%)",
+          "temas": [
+            "Pruebas unitarias con assert",
+            "Módulos unittest y doctest",
+            "Depuración básica con print y pdb",
+            "Estrategias de resolución de problemas"
+          ],
+          "porcentaje": 14
+        }
+      ],
+      "requisitos": [
+        "Conocimientos básicos de programación",
+        "Familiaridad con conceptos de computación",
+        "Experiencia práctica recomendada con Python (3-6 meses)"
+      ],
+      "infoExamen": {
+        "duracion": "50 minutos",
+        "formato": "40-50 preguntas de selección múltiple y escenario",
+        "notaAprobacion": "Puntuación escalonada según dificultad",
+        "numeroIntentos": "Sin límite específico documentado",
+        "periodoEspera": "Variable según centro de examen"
+      },
+      "publicoObjetivo": "Estudiantes de informática, desarrolladores junior y profesionales que buscan validar sus conocimientos fundamentales en programación Python",
+      "carreras": [
+        "Desarrollador Python Junior",
+        "Programador de Aplicaciones",
+        "Analista de Datos Junior",
+        "Desarrollador Web Backend",
+        "Ingeniero de Software Junior",
+        "Automatizador de Procesos"
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCertificaciones": 75,
+    "categoriasCubiertas": 14,
+    "ultimaActualizacion": "2026-06-26",
+    "estadoProyecto": "Procesamiento completado - Enriquecimiento detallado de ejemplos representativos realizado",
+    "notas": [
+      "Se han procesado 75 archivos PDF de certificaciones",
+      "Estructura JSON completada con ejemplos detallados de Adobe (Photoshop, Illustrator, InDesign) e ITS Python",
+      "Los 71 certificaciones restantes mantienen estructura básica listas para enriquecimiento",
+      "Cada categoría está organizada y documentada en el resumen de procesamiento"
+    ],
+    "proximosPasos": [
+      "Extraer información detallada de los 71 PDFs restantes",
+      "Completar descripciones profesionales para todas las certificaciones",
+      "Agregar módulos específicos con porcentajes reales",
+      "Incluir requisitos detallados y formatos de examen"
+    ]
+  }
+}

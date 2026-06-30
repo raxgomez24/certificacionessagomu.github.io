@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda tu examen de certificación internacional con Sagomu. Centro certificador oficial autorizado.">
+    <title>Agendar Examen | Sagomu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agendar.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                SAGOMU
+            </div>
+            <div class="header-nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="certificaciones.html">Certificaciones</a></li>
+                    <li><a href="index.html#como-funciona">¿Cómo funciona?</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <a href="#agendar" class="btn btn-primary">Agendar Examen</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Agendar Examen</h1>
+        <p>Completa el formulario y nos pondremos en contacto contigo para coordinar tu examen de certificación.</p>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="agendar-container">
+        <!-- Información de la certificación seleccionada -->
+        <div id="cert-info" class="cert-info-section hidden">
+            <h2>📋 Certificación Seleccionada</h2>
+            <div class="selected-cert">
+                <img id="selected-logo" src="" alt="Logo" class="cert-logo">
+                <div class="cert-details">
+                    <h3 id="selected-name">Nombre de la Certificación</h3>
+                    <p id="selected-brand" class="cert-brand">Marca</p>
+                    <p id="selected-category" class="cert-category">Categoría</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de agendamiento -->
+        <section class="form-section">
+            <h2>📝 Datos de Contacto</h2>
+            <form id="agendar-form" class="agendar-form">
+                <!-- Nombre completo -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required
+                           placeholder="Tu nombre completo">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="tu@email.com">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required
+                           placeholder="+56 9 1234 5678">
+                </div>
+
+                <!-- Selección de certificación -->
+                <div class="form-group">
+                    <label for="certificacion">Certificación de Interés *</label>
+                    <select id="certificacion" name="certificacion" required>
+                        <option value="">Seleccione una certificación</option>
+                        <!-- Se cargarán dinámicamente -->
+                    </select>
+                </div>
+
+                <!-- Fecha preferente -->
+                <div class="form-group">
+                    <label for="fecha">Fecha Preferente</label>
+                    <input type="date" id="fecha" name="fecha">
+                </div>
+
+                <!-- Horario preferente -->
+                <div class="form-group">
+                    <label for="horario">Horario Preferente</label>
+                    <select id="horario" name="horario">
+                        <option value="">Seleccione un horario</option>
+                        <option value="morning">Mañana (9:00 - 12:00)</option>
+                        <option value="afternoon">Tarde (14:00 - 18:00)</option>
+                        <option value="evening">Noche (18:00 - 21:00)</option>
+                    </select>
+                </div>
+
+                <!-- Mensaje adicional -->
+                <div class="form-group">
+                    <label for="mensaje">Mensaje Adicional</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"
+                              placeholder="¿Tienes alguna pregunta o comentario adicional?"></textarea>
+                </div>
+
+                <!-- Términos y condiciones -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <span>Acepto los <a href="#" class="link">términos y condiciones</a> y la <a href="#" class="link">política de privacidad</a> *</span>
+                    </label>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-large">Enviar Solicitud</button>
+                    <button type="reset" class="btn btn-outline-secondary">Limpiar Formulario</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Información de contacto -->
+        <section class="contact-info">
+            <h2>📞 ¿Necesitas Ayuda?</h2>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>contacto@sagomu.com</p>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p>+56 9 1234 5678</p>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">🌐</div>
+                    <h3>Horario de Atención</h3>
+                    <p>Lunes a Viernes: 9:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer-column">
+                    <h3>SAGOMU</h3>
+                    <p>Centro Certificador Oficial autorizado por Pearson VUE y Certiport. Tu puerta de entrada a certificaciones internacionales.</p>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="certificaciones.html">Catálogo de Certificaciones</a></li>
+                        <li><a href="agendar.html">Agendar Examen</a></li>
+                        <li><a href="index.html#como-funciona">¿Cómo funciona?</a></li>
+                        <li><a href="index.html#soporte">Soporte</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Logos oficiales -->
+                <div class="footer-column">
+                    <h3>Parcerias Oficiales</h3>
+                    <div class="footer-logos">
+                        <img src="assets/logos/ic3.svg" alt="Certiport" title="Certiport">
+                        <img src="assets/logos/microsoft_office_specialist_badge.svg" alt="Microsoft" title="Microsoft">
+                        <img src="assets/logos/Adobe_Certified_Professional_badge.svg" alt="Adobe" title="Adobe">
+                        <img src="assets/logos/cisco.svg" alt="Cisco" title="Cisco">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sagomu. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/agendar.js"></script>
+</body>
+</html>

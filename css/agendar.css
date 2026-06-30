@@ -1,0 +1,241 @@
+/**
+ * Estilos para la página de agendamiento - Sagomu
+ */
+
+/* Contenedor principal */
+.agendar-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* Información de la certificación seleccionada */
+.cert-info-section {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--borde-radio);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--sombra-hover);
+}
+
+.cert-info-section.hidden {
+    display: none;
+}
+
+.cert-info-section h2 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.selected-cert {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.selected-cert .cert-logo {
+    max-width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.selected-cert .cert-details h3 {
+    color: white;
+    margin-bottom: var(--spacing-xs);
+}
+
+.selected-cert .cert-brand {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.selected-cert .cert-category {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Sección del formulario */
+.form-section {
+    background: white;
+    border-radius: var(--borde-radio);
+    padding: var(--spacing-xl);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: var(--spacing-xl);
+}
+
+.form-section h2 {
+    color: var(--color-primario);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-fondo);
+}
+
+/* Formulario */
+.agendar-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-texto);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    padding: var(--spacing-sm);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transicion);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox */
+.checkbox-group {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.checkbox-label .link {
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+/* Botones de acción */
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+/* Información de contacto */
+.contact-info {
+    background: var(--color-fondo);
+    border-radius: var(--borde-radio);
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: var(--color-primario);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.contact-method {
+    text-align: center;
+}
+
+.method-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-method h3 {
+    color: var(--color-secundario);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-method p {
+    color: var(--color-texto-claro);
+}
+
+/* Validación de formulario */
+.form-group input:invalid,
+.form-group select:invalid {
+    border-color: #ef4444;
+}
+
+.form-group input:valid,
+.form-group select:valid {
+    border-color: #10b981;
+}
+
+/* Mensajes de estado */
+.status-message {
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.status-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.status-message.error {
+    background: #fee;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selected-cert {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+}

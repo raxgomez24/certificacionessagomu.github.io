@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAGOMU - Centro Certificador Profesional en alianza con Universidad Amerike CDMX. Certificaciones internacionales en Adobe, Unity, Ciberseguridad y más. Cursos de preparación y días abiertos.">
+    <title>SAGOMU | Centro de Certificaciones Profesionales</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Hero Section Mejorado */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.1)" d="M0 50 L100 50 L100 100 L0 100 Z"></path></svg>');
+            animation: heroPattern 20s linear infinite;
+        }
+
+        @keyframes heroPattern {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeIn 1.2s ease-in;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            font-size: 0.95rem;
+            animation: fadeIn 1.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-feature i {
+            font-size: 1.2rem;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 18px 45px;
+            font-size: 1.15rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            border: 3px solid white;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #667eea;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .service-description {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .service-price-label {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .service-cta {
+            text-align: center;
+        }
+
+        .service-cta .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Open Days Section */
+        .open-days-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .open-days-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .open-days-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .open-days-date {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 30px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .open-days-info {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .open-days-certifications {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Certifications Highlight Section */
+        .certs-highlight {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .certs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .cert-card-mini {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+        }
+
+        .cert-card-mini:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+
+        .cert-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            object-fit: contain;
+        }
+
+        .cert-name {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cert-brand {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .cert-cta {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .cert-cta:hover {
+            color: #764ba2;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .process-steps {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            padding: 15px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-btn.whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .contact-btn.email {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .open-days-certifications {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cert-badge {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header de navegación -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                SAGOMU
+            </div>
+            <div class="header-nav">
+                <ul class="nav-links">
+                    <li><a href="certificaciones.html" class="active">Certificaciones</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+li><a href="#dias-abiertos">Días Abiertos</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary">Agendar Ahora</a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">🎓 En alianza con Universidad Amerike CDMX</div>
+            <h1 class="hero-title">Certifica tu Futuro Profesional</h1>
+            <p class="hero-subtitle">SAGOMU + Universidad Amerike CDMX</p>
+            <p class="hero-description">
+                Centro certificador profesional especializado en Adobe, Unity, Ciberseguridad y más.
+                Cursos de preparación integral, simulacros y certificación en instalaciones universitarias de primer nivel.
+            </p>
+
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i>🎓</i>
+                    <span>Cursos Incluidos</span>
+                </div>
+                <div class="hero-feature">
+                    <i>✅</i>
+                    <span>Simulacros Online</span>
+                </div>
+                <div class="hero-feature">
+                    <i>🏛️</i>
+                    <span>Instalaciones Profesionales</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="certificaciones.html" class="btn-hero btn-primary">Ver Certificaciones</a>
+                <a href="#contacto" class="btn-hero btn-secondary">Agendar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="servicios">
+        <div class="services-container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">
+                Dos opciones diseñadas para diferentes necesidades. Elige la que mejor se adapte a tus objetivos.
+            </p>
+
+            <div class="services-grid">
+                <!-- Servicio 1: Estudiantes -->
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3 class="service-title">Para Estudiantes Universitarios</h3>
+                    <p class="service-description">
+                        Certificaciones en tu entorno académico con todo incluido. Ideal para estudiantes de
+                        Universidad Amerike CDMX que buscan validar sus habilidades con credenciales internacionales.
+                    </p>
+                    <p class="service-price">$10,000 MXN</p>
+                    <p class="service-price-label">Precio por certificación</p>
+                    <div class="service-cta">
+                        <a href="agendar.html?tipo=universidad" class="btn">Aplicar Ahora</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Profesionales -->
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3 class="service-title">Para Profesionales Externos</h3>
+                    <p class="service-description">
+                        Días abiertos de certificación en instalaciones universitarias. Curso de preparación de 4 semanas,
+                        simulacros y aplicación del examen. Certifica tus habilidades en ambiente profesional.
+                    </p>
+                    <p class="service-price">$10,000 MXN</p>
+                    <p class="service-price-label">Precio por certificación</p>
+                    <div class="service-cta">
+                        <a href="#dias-abiertos" class="btn">Ver Próximo Día</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Days Section -->
+    <section class="open-days-section" id="dias-abiertos">
+        <div class="open-days-content">
+            <h2 class="open-days-title">📅 Próximo Día Abierto</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+                Certificaciones disponibles para profesionales externos en instalaciones universitarias
+            </p>
+
+            <div class="open-days-date">
+                🗓️ Sábado 25 de Julio, 2024
+            </div>
+
+            <div class="open-days-info">
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    <strong>📍 Ubicación:</strong> Instalaciones de Universidad Amerike CDMX<br>
+                    <strong>⏰ Horario:</strong> 9:00 AM - 6:00 PM<br>
+                    <strong>🎯 Cupos Limitados:</strong> Reserva tu lugar con anticipación<br>
+                    <strong>💰 Incluye:</strong> Curso de preparación + Simulacros + Examen
+                </p>
+            </div>
+
+            <div class="open-days-certifications">
+                <div class="cert-badge">
+                    <div>🎨 Adobe</div>
+                    <small>Photoshop, Illustrator, InDesign</small>
+                </div>
+                <div class="cert-badge">
+                    <div>🎮 Unity</div>
+                    <small>Programmer, Digital Artist</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Highlight Section -->
+    <section class="certs-highlight" id="certificaciones">
+        <div class="certs-container">
+            <h2 class="section-title">Certificaciones Principales</h2>
+            <p class="section-subtitle">
+                Las certificaciones más demandadas por el mercado laboral. Valida tus habilidades con credenciales reconocidas mundialmente.
+            </p>
+
+            <div class="certs-grid">
+                <!-- Adobe -->
+                <div class="cert-card-mini">
+                    <img src="assets/logos/Adobe_Certified_Professional_badge.svg" alt="Adobe" class="cert-logo">
+                    <h4 class="cert-name">Adobe Creative Cloud</h4>
+                    <p class="cert-brand">Photoshop, Illustrator, InDesign, Premiere</p>
+                    <a href="certificaciones.html?categoria=diseno-creatividad" class="cert-cta">Ver catálogo →</a>
+                </div>
+
+                <!-- Unity -->
+                <div class="cert-card-mini">
+                    <img src="assets/logos/unity.svg" alt="Unity" class="cert-logo">
+                    <h4 class="cert-name">Unity Technologies</h4>
+                    <p class="cert-brand">Programmer, Digital Artist, VR</p>
+                    <a href="certificaciones.html?categoria=tecnologias-informacion" class="cert-cta">Ver catálogo →</a>
+                </div>
+
+                <!-- Ciberseguridad -->
+                <div class="cert-card-mini">
+                    <img src="assets/logos/cisco.svg" alt="Cisco" class="cert-logo">
+                    <h4 class="cert-name">Ciberseguridad Cisco</h4>
+                    <p class="cert-brand">CCST Networking, Cybersecurity</p>
+                    <a href="certificaciones.html?categoria=tecnologias-informacion" class="cert-cta">Ver catálogo →</a>
+                </div>
+
+                <!-- PMI -->
+                <div class="cert-card-mini">
+                    <img src="assets/logos/pmi.svg" alt="PMI" class="cert-logo">
+                    <h4 class="cert-name">PMI Project Management</h4>
+                    <p class="cert-brand">Project Management Ready</p>
+                    <a href="certificaciones.html?categoria=negocios-habilidades-blandas" class="cert-cta">Ver catálogo →</a>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="cert-card-mini">
+                    <img src="assets/logos/ic3.svg" alt="IC3" class="cert-logo">
+                    <h4 class="cert-name">Habilidades Digitales</h4>
+                    <p class="cert-brand">IC3 Spark, Digital Literacy, ESB</p>
+                    <a href="certificaciones.html?categoria=habilidades-digitales" class="cert-cta">Ver catálogo →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="proceso">
+        <div class="services-container">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <p class="section-subtitle">
+                Un camino claro y estructurado hacia tu certificación internacional
+            </p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Elige tu Certificación</h3>
+                    <p class="step-description">
+                        Selecciona entre nuestras certificaciones disponibles la que mejor se alinee con tus objetivos profesionales y de carrera.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Prepárate con Nosotros</h3>
+                    <p class="step-description">
+                        Curso intensivo de 4 semanas con material de estudio, simulacros online y acompañamiento personalizado de instructores expertos.
+                    </p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Certifícate tu Éxito</h3>
+                    <p class="step-description">
+                        Aplica tu examen en instalaciones profesionales de Universidad Amerike CDMX y obtén tu certificación internacional reconocida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-content">
+            <h2 class="contact-title">¿Listo para Comenzar?</h2>
+            <p class="contact-description">
+                Ya sea estudiante universitario o profesional externo, tenemos el programa perfecto para ti.
+                Contáctanos hoy y comienza tu camino hacia la certificación.
+            </p>
+
+            <div class="contact-buttons">
+                <a href="agendar.html" class="contact-btn whatsapp">
+                    📱 Agendar Consulta
+                </a>
+                <a href="mailto:contacto@sagomu.com" class="contact-btn email">
+                    ✉️ Email: contacto@sagomu.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Sobre SAGOMU</h4>
+                    <p style="opacity: 0.9;">
+                        Centro certificador profesional en alianza estratégica con Universidad Amerike CDMX.
+                        Especializados en certificaciones internacionales de tecnología y diseño.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Certificaciones</h4>
+                    <ul class="footer-links">
+                        <li><a href="certificaciones.html">Catálogo Completo</a></li>
+                        <li><a href="certificaciones.html?categoria=diseno-creatividad">Adobe Creative Cloud</a></li>
+                        <li><a href="certificaciones.html?categoria=tecnologias-informacion">Unity Technologies</a></li>
+                        <li><a href="certificaciones.html?categoria=tecnologias-informacion">Ciberseguridad Cisco</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#proceso">Nuestro Proceso</a></li>
+                        <li><a href="#dias-abiertos">Días Abiertos</a></li>
+                        <li><a href="agendar.html">Agendar Consulta</a></li>
+                        <li><a href="https://universidadamerike.edu.mx/" target="_blank">Universidad Amerike</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contacto@sagomu.com">✉️ contacto@sagomu.com</a></li>
+                        <li><a href="https://wa.me/521234567890" target="_blank">📱 WhatsApp (Pronto)</a></li>
+                        <li><a href="https://universidadamerike.edu.mx/" target="_blank">🌐 Universidad Amerike</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 SAGOMU. Todos los derechos reservados.</p>
+                <p style="opacity: 0.7; margin-top: 10px;">
+                    Centro certificador profesional • En alianza con Universidad Amerike CDMX
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
