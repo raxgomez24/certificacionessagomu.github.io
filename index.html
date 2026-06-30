@@ -387,10 +387,75 @@
             color: #764ba2;
         }
 
+        /* Partners Logo Section */
+        .partners-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .partners-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .partner-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .partner-logo-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+            border-color: #667eea;
+            background: white;
+        }
+
+        .partner-logo-img {
+            width: auto;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            filter: grayscale(0%);
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo-item:hover .partner-logo-img {
+            transform: scale(1.1);
+        }
+
+        .partner-name {
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .partner-category {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
         /* Process Section */
         .process-section {
             padding: 80px 20px;
-            background: white;
+            background: #f8f9fa;
         }
 
         .process-steps {
@@ -594,6 +659,27 @@
             .cert-badge {
                 width: 100%;
             }
+
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .partner-logo-item {
+                padding: 15px 10px;
+            }
+
+            .partner-logo-img {
+                height: 60px;
+            }
+
+            .partner-name {
+                font-size: 0.75rem;
+            }
+
+            .partner-category {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
@@ -608,8 +694,9 @@
                 <ul class="nav-links">
                     <li><a href="certificaciones.html" class="active">Certificaciones</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#partners">Partners</a></li>
                     <li><a href="#proceso">Proceso</a></li>
-li><a href="#dias-abiertos">Días Abiertos</a></li>
+                    <li><a href="#dias-abiertos">Días Abiertos</a></li>
                 </ul>
                 <a href="#contacto" class="btn btn-primary">Agendar Ahora</a>
                 <div class="hamburger" id="hamburger">
@@ -777,6 +864,138 @@ li><a href="#dias-abiertos">Días Abiertos</a></li>
                     <h4 class="cert-name">Habilidades Digitales</h4>
                     <p class="cert-brand">IC3 Spark, Digital Literacy, ESB</p>
                     <a href="certificaciones.html?categoria=habilidades-digitales" class="cert-cta">Ver catálogo →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Logo Section -->
+    <section class="partners-section" id="partners">
+        <div class="partners-container">
+            <h2 class="section-title">Nuestros Partners de Certificación</h2>
+            <p class="section-subtitle">
+                Certificaciones internacionales avaladas por las líderes de la industria tecnológica mundial.
+                Más de 17 credenciales disponibles para impulsar tu carrera profesional.
+            </p>
+
+            <div class="partners-grid">
+                <!-- Adobe -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/Adobe_Certified_Professional_badge.svg" alt="Adobe Certified Professional" class="partner-logo-img">
+                    <h4 class="partner-name">Adobe Certified Professional</h4>
+                    <p class="partner-category">Diseño y Creatividad</p>
+                </div>
+
+                <!-- Apple Swift -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/App_Development_Swift_Associate_Badge.svg" alt="App Development with Swift" class="partner-logo-img">
+                    <h4 class="partner-name">App Development with Swift</h4>
+                    <p class="partner-category">Programación Móvil</p>
+                </div>
+
+                <!-- Apple Swift -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/App_Development_Swift_Badge.svg" alt="Swift Development" class="partner-logo-img">
+                    <h4 class="partner-name">Swift Development</h4>
+                    <p class="partner-category">Programación iOS</p>
+                </div>
+
+                <!-- Apple Swift CU -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/App_Development_Swift_CU_Badge.svg" alt="Swift Certified User" class="partner-logo-img">
+                    <h4 class="partner-name">Swift Certified User</h4>
+                    <p class="partner-category">Programación iOS</p>
+                </div>
+
+                <!-- Autodesk -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/Autodesk_certified User_logo.svg" alt="Autodesk Certified User" class="partner-logo-img">
+                    <h4 class="partner-name">Autodesk Certified User</h4>
+                    <p class="partner-category">Diseño CAD</p>
+                </div>
+
+                <!-- Communication Skills -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/Communication_Skills_for_Business_badge.svg" alt="Communication Skills for Business" class="partner-logo-img">
+                    <h4 class="partner-name">Communication Skills for Business</h4>
+                    <p class="partner-category">Habilidades Blandas</p>
+                </div>
+
+                <!-- Entrepreneurship -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/Entrepreneurship_and_Small_Business_badge.svg" alt="Entrepreneurship and Small Business" class="partner-logo-img">
+                    <h4 class="partner-name">Entrepreneurship and Small Business</h4>
+                    <p class="partner-category">Emprendimiento</p>
+                </div>
+
+                <!-- ITS -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/Information_Technology_Specialist_badge.svg" alt="Information Technology Specialist" class="partner-logo-img">
+                    <h4 class="partner-name">Information Technology Specialist</h4>
+                    <p class="partner-category">Tecnología IT</p>
+                </div>
+
+                <!-- Cisco -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/cisco.svg" alt="Cisco" class="partner-logo-img">
+                    <h4 class="partner-name">Cisco Certified Support Technician</h4>
+                    <p class="partner-category">Redes y Ciberseguridad</p>
+                </div>
+
+                <!-- IC3 -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/ic3.svg" alt="IC3 Digital Literacy" class="partner-logo-img">
+                    <h4 class="partner-name">IC3 Digital Literacy</h4>
+                    <p class="partner-category">Habilidades Digitales</p>
+                </div>
+
+                <!-- Intuit -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/intuit.svg" alt="Intuit QuickBooks" class="partner-logo-img">
+                    <h4 class="partner-name">Intuit QuickBooks Certified</h4>
+                    <p class="partner-category">Contabilidad</p>
+                </div>
+
+                <!-- Meta -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/meta.svg" alt="Meta" class="partner-logo-img">
+                    <h4 class="partner-name">Meta Certified Digital Marketing</h4>
+                    <p class="partner-category">Marketing Digital</p>
+                </div>
+
+                <!-- Microsoft Educator -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/microsoft_certified_educator_badge.svg" alt="Microsoft Certified Educator" class="partner-logo-img">
+                    <h4 class="partner-name">Microsoft Certified Educator</h4>
+                    <p class="partner-category">Educación</p>
+                </div>
+
+                <!-- Microsoft Fundamentals -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/microsoft_fundamentals_badge.svg" alt="Microsoft Fundamentals" class="partner-logo-img">
+                    <h4 class="partner-name">Microsoft Fundamentals</h4>
+                    <p class="partner-category">Computación en la Nube</p>
+                </div>
+
+                <!-- Microsoft MOS -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/microsoft_office_specialist_badge.svg" alt="Microsoft Office Specialist" class="partner-logo-img">
+                    <h4 class="partner-name">Microsoft Office Specialist</h4>
+                    <p class="partner-category">Ofimática</p>
+                </div>
+
+                <!-- PMI -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/pmi.svg" alt="PMI" class="partner-logo-img">
+                    <h4 class="partner-name">PMI Project Management Ready</h4>
+                    <p class="partner-category">Gestión de Proyectos</p>
+                </div>
+
+                <!-- Unity -->
+                <div class="partner-logo-item">
+                    <img src="assets/logos/unity.svg" alt="Unity" class="partner-logo-img">
+                    <h4 class="partner-name">Unity Certified User</h4>
+                    <p class="partner-category">Desarrollo de Videojuegos</p>
                 </div>
             </div>
         </div>
